@@ -91,10 +91,19 @@ public class IndexServlet extends HttpServlet {
 
 	private String getLeftTree() throws JsonProcessingException {
 		List<LeftTreeEntity> leftTreeGridList = new ArrayList<LeftTreeEntity>();
+		
+		LeftTreeEntity root = new LeftTreeEntity();
+		root.setId("0");
+		root.setMenu("JQGrid4.4.1示例");
+		root.setUrl("");
+		root.setLevel("0");
+		root.setIsLeaf("false");
+		root.setExpanded("false");
+		root.setLoaded("true");
 
 		LeftTreeEntity root1 = new LeftTreeEntity();
 		root1.setId("1");
-		root1.setMenu("Loading Data");
+		root1.setMenu("加载数据");
 		root1.setUrl("");
 		root1.setParent("0");
 		root1.setLevel("0");
@@ -104,8 +113,8 @@ public class IndexServlet extends HttpServlet {
 
 		LeftTreeEntity root1_1 = new LeftTreeEntity();
 		root1_1.setId("2");
-		root1_1.setMenu("XML Data");
-		root1_1.setUrl("");
+		root1_1.setMenu("XML格式数据");
+		root1_1.setUrl("xmlex.html");
 		root1_1.setParent("1");
 		root1_1.setLevel("1");
 		root1_1.setIsLeaf("true");
@@ -114,8 +123,8 @@ public class IndexServlet extends HttpServlet {
 
 		LeftTreeEntity root1_2 = new LeftTreeEntity();
 		root1_2.setId("3");
-		root1_2.setMenu("JSON Data");
-		root1_2.setUrl("");
+		root1_2.setMenu("JSON格式数据");
+		root1_2.setUrl("page/jqgridjson.jsp");
 		root1_2.setParent("1");
 		root1_2.setLevel("1");
 		root1_2.setIsLeaf("true");
@@ -134,7 +143,7 @@ public class IndexServlet extends HttpServlet {
 
 		LeftTreeEntity root1_4 = new LeftTreeEntity();
 		root1_4.setId("5");
-		root1_4.setMenu("Array Data");
+		root1_4.setMenu("Array格式数据");
 		root1_4.setUrl("");
 		root1_4.setParent("1");
 		root1_4.setLevel("1");
@@ -158,6 +167,7 @@ public class IndexServlet extends HttpServlet {
 		leftTreeGridList.add(root1_3);
 		leftTreeGridList.add(root1_4);
 		leftTreeGridList.add(root2);
+		
 
 		ObjectMapper mapper = new ObjectMapper();
 		String treeGridJson = mapper.writeValueAsString(leftTreeGridList);

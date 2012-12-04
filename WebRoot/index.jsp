@@ -81,15 +81,13 @@
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/jquery-1.8.3.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/jquery.layout-latest.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jquery-ui-1.9.2/js/jquery-ui-1.9.2.custom.min.js"></script>
-		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/i18n/grid.locale-en.js"></script>
+		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/i18n/grid.locale-cn.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/jquery.jqGrid.min.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/jquery.tablednd.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/jquery.contextmenu.js"></script>
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/ui.multiselect.js"></script>
 		
-		<!-- TreeGrid -->
 		<script type="text/javascript" src="<%=path %>/js/jquery/jqgrid-4.4.1/js/src/grid.treegrid.js"></script>
-		
 		<script type="text/javascript">
 		jQuery(document).ready(function(){
 		    //$('#switcher').themeswitcher();
@@ -116,7 +114,7 @@
 		    jQuery("#west-grid").jqGrid({
 		    	treeGrid: true,
 		        treeGridModel: "adjacency",
-		        url: '<%=path%>/servlet/index',//'leftTree.xml',
+		        url: '<%=path%>/servlet/index',
 		        mtype:"POST",
 		        datatype: "json",
 		        postData:{
@@ -131,8 +129,7 @@
 		            {name: "menu", width:150, resizable: false, sortable:false},
 		            {name: "url",width:1,hidden:true}
 		        ],
-		        
-				caption: "JQGrid4.4.1示例",
+		        caption: "JQGrid4.4.1示例",
 		        ExpandColumn: "menu",
 		        autowidth: true,
 		        //width: 180,
@@ -159,7 +156,6 @@
 								dataType: "html",
 								complete : function (req, err) {
 									$(st,"#tabs").append(req.responseText);
-									//try { var pageTracker = _gat._getTracker("UA-5463047-4"); pageTracker._trackPageview(); } catch(err) {};
 									var clck = '<p style="border: 1px solid; background-color: lemonchiffon; width:654px;height:25px;margin-bottom: 8px;padding-top: 8px;text-align: center">';
 									clck += '<b>Please, support the jqGrid project by clicking on our sponsors ad! </b></p>';
 									

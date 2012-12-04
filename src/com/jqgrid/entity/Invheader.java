@@ -11,10 +11,11 @@ public class Invheader implements java.io.Serializable {
 
 	private Integer invid;
 	private Timestamp invdate;
+	private String name;
+	private Double amount;
 	private Double tax;
 	private Double total;
 	private String note;
-	private Double amount;
 
 	public Invheader() {
 	}
@@ -74,5 +75,13 @@ public class Invheader implements java.io.Serializable {
 
 	public void setAmount(Double amount) {
 		this.amount = amount;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

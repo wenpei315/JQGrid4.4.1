@@ -9,22 +9,22 @@
 		<servlet-name>JqGridJsonDemo</servlet-name>
 		<servlet-class>com.jqgrid.servlet.JqGridJsonDemo</servlet-class>
 	</servlet>
-  <servlet>
-    <description>首页Servlet</description>
-    <display-name>IndexServlet</display-name>
-    <servlet-name>IndexServlet</servlet-name>
-    <servlet-class>com.jqgrid.servlet.IndexServlet</servlet-class>
-  </servlet>
+	<servlet>
+		<description>首页Servlet</description>
+		<display-name>IndexServlet</display-name>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.jqgrid.servlet.IndexServlet</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
 		<servlet-name>JqGridJsonDemo</servlet-name>
 		<url-pattern>/servlet/JqGridJsonDemo</url-pattern>
 	</servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>IndexServlet</servlet-name>
-    <url-pattern>/servlet/index</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/servlet/index</url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
