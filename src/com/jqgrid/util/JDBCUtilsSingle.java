@@ -7,9 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public final class JDBCUtilsSingle {
-	private String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&amp;&characterEncoding=UTF8";
-	private String username = "root";
-	private String password = "root";
+	private String url = "jdbc:hsqldb:hsql://localhost:9001/demodb";
+	//"jdbc:mysql://localhost:3306/test?useUnicode=true&amp;&characterEncoding=UTF8";
+	private String username = "sa";//"root";
+	private String password = "";//"root";
 
 	private static JDBCUtilsSingle instance = null;
 
@@ -25,7 +26,7 @@ public final class JDBCUtilsSingle {
 
 	static {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.hsqldb.jdbcDriver");//"com.mysql.jdbc.Driver"
 		} catch (ClassNotFoundException e) {
 			throw new ExceptionInInitializerError(e);
 		}
